@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use phpDocumentor\Reflection\Types\Float_;
 
+
+
 class ClientController  extends Controller
 {
 
@@ -62,7 +64,7 @@ class ClientController  extends Controller
     {
 
         $rules = [
-            'shop_id' => 'required|numeric|exists:shops,id',
+            'shop_id' => 'required|numeric|exists:shopsa,id',
             'client_name' => 'required',
             'client_phone_no' => 'required',
         ];
@@ -132,6 +134,7 @@ class ClientController  extends Controller
     //display all client's info
     public function clientInfos($id)
     {
+
         $client = Client::find($id);
 
         if($client!=null)

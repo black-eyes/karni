@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Client;
 
-class Shop extends Model
+class   Shop extends Model
 {
     use HasFactory;
     protected $table = 'shops';
 
-    protected  $filable = ["shop_name","phone_no","app_lang","password"];
+    protected  $fillable = ["shop_name","phone_no","app_lang","password"];
 
 
     /**

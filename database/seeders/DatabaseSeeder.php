@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
                 "shop_name"=>$faker->sentence(1)."--".$i,
                 "phone_no"=>$faker->phoneNumber,
                 "app_lang"=>$faker->languageCode,
-                "password"=>$faker->sentence(1)
+                "password"=>$faker->sentence(1),
             ]);
 
             $id= DB::getPdo()->lastInsertId();

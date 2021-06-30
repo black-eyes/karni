@@ -30,8 +30,25 @@ Route::get("shops",[ShopController::class,'index']);
 Route::get("shop/{id}",[ShopController::class,'show']);
 
 
+//update shop infos
+//the mobile phone will not be updated
+Route::patch("shop/{id}",[ShopController::class,'updateShop']);
+
+Route::post("shop/{id}",[ShopController::class,'createShop']);
+
+//destroy a specific shop
+Route::delete("shop/destroy",[ShopController::class,'destroy']);
+
+
+
 //Display all client for a specific shop
-Route::get("shop/{id}",[ShopController::class,'showClients']);
+Route::get("shop/{id}/clients",[ShopController::class,'showClients']);
+
+//find a specific shop using his phone number
+Route::get("shop/{phone_no}/find",[ShopController::class,'findShopByPhone']);
+
+Route::get("shop/{id}/status",[ShopController::class,'status']);
+
 
 
 //#Client
